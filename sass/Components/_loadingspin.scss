@@ -1,0 +1,56 @@
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.2s linear;
+    background-color: $white;
+    animation: hide-loading-screen 0s ease-in 3s;
+    animation-fill-mode: forwards;
+}
+
+.spinner {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    overflow: hidden;
+    position: relative;
+    animation: text-color 2s ease-in-out infinite;
+    z-index: 1001;
+
+    .spinner-sector {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 15px solid transparent;
+        mix-blend-mode: overlay;
+        animation: rotate var(--duration) var(--timing) infinite;
+        pointer-events: none;
+    }
+
+    .spinner-sector-primarycolor {
+        border-top-color: $color-primary;
+        --duration: 1.5s;
+        --timing: ease-in-out;
+    }
+    .spinner-sector-secondarycolor {
+        border-left-color: $color-secondary;
+        --duration: 2s;
+        --timing: ease-in;
+    }
+    .spinner-sector-tertiarycolor {
+        border-right-color: $color-tertiary;
+        --duration: 2.5s;
+        --timing: ease-out;
+    }
+}

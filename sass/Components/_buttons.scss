@@ -1,0 +1,81 @@
+.booking-button {
+    padding: 15px;
+    border-radius: 45px;
+    border: none;
+    color: #fff;
+    background: linear-gradient($color-secondary, $color-primary);
+    width: 80%;
+    max-width: 500px;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+        background: linear-gradient(lighten($color-secondary, 7%), lighten($color-primary, 7%));
+        box-shadow: 1px 1px 1px $color-primary;
+    }
+
+    @include for-tablet {
+        width: 240px;
+        padding: 12px;
+    }
+}
+
+.order-button {
+    padding-bottom: 40px;
+    text-align: center;
+
+    button {
+        padding: 15px;
+        border-radius: 45px;
+        border: none;
+        color: #fff;
+        background: linear-gradient($color-secondary, $color-primary);
+        width: 50%;
+        max-width: 800px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover {
+            background-clip: text;
+            -webkit-text-fill-color: $white;
+            background: linear-gradient(lighten($color-secondary, 7%), lighten($color-primary, 7%));
+            box-shadow: 1px 1px 1px $color-primary;
+        }
+
+        @include for-tablet {
+            width: 200px;
+        }
+    }
+}
+
+.like-btn .like-icon {
+    font-size: 24px;
+    cursor: pointer;
+    
+    &:hover {
+        font-weight: 900;
+        animation: opacity 0.5s ease-in-out;
+        background: linear-gradient($color-secondary, $color-primary);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.check-btn-container {
+    width: 50px;
+    opacity: 1;
+    background-color: $color-tertiary;
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .check-btn {
+        color: $color-tertiary;
+        background-color: $white;
+        border-radius: 30px;
+        padding: 2px;
+        font-size: 14px;
+    }
+}
